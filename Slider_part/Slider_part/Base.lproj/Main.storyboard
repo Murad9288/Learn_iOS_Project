@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Slider_part" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="513-lW-n26">
+                                <rect key="frame" x="18" y="237" width="378" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mEe-WX-XIz"/>
+                                    <constraint firstAttribute="width" constant="374" id="mvI-35-ovN"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slider_value:" destination="BYZ-38-t0r" eventType="valueChanged" id="r6b-mT-xaE"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Sound =" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUz-t2-1Sq">
+                                <rect key="frame" x="20" y="438" width="374" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="VWQ-lG-YA5"/>
+                                    <constraint firstAttribute="width" constant="374" id="h6T-Ea-9Nb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKs-tk-qgf">
+                                <rect key="frame" x="20" y="59" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96254030467523299" green="0.92221105094529532" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AUz-t2-1Sq" secondAttribute="trailing" constant="20" id="FuJ-b2-tDY"/>
+                            <constraint firstItem="513-lW-n26" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="HBS-6M-bcB"/>
+                            <constraint firstItem="AUz-t2-1Sq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KgO-s3-5IM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AUz-t2-1Sq" secondAttribute="bottom" constant="371" id="XS6-R8-5Y4"/>
+                            <constraint firstItem="AUz-t2-1Sq" firstAttribute="top" secondItem="513-lW-n26" secondAttribute="bottom" constant="171" id="cGK-HC-BPX"/>
+                            <constraint firstItem="AUz-t2-1Sq" firstAttribute="top" secondItem="513-lW-n26" secondAttribute="bottom" constant="171" id="gWb-Xi-3te"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="513-lW-n26" secondAttribute="trailing" constant="20" id="mVD-Un-cPo"/>
+                            <constraint firstItem="513-lW-n26" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nYU-1i-JPf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Label_1" destination="AUz-t2-1Sq" id="qkl-36-DZb"/>
+                        <outlet property="slider_control" destination="513-lW-n26" id="lnz-hm-1dN"/>
+                        <outlet property="switch_control" destination="tKs-tk-qgf" id="ial-hQ-jxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.831775700934578" y="66.738660907127439"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
