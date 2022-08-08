@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="slider_excersise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lg9-mn-hcc">
+                                <rect key="frame" x="184" y="124" width="63" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="3UZ-dS-hzt"/>
+                                </constraints>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="RtY-T3-F5n">
+                                <rect key="frame" x="18" y="241" width="392" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="5aC-xW-hHZ"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.12742405204098617" green="1" blue="0.32615591781297781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.061129800925524336" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="slide_value:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hq4-7T-4bG"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ao9-71-Lv6">
+                                <rect key="frame" x="20" y="401" width="388" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="LrL-4S-oxw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.89610603335156036" green="0.93365415592783507" blue="0.91145612836265955" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lg9-mn-hcc" secondAttribute="trailing" constant="183" id="CK1-3J-vvD"/>
+                            <constraint firstItem="Lg9-mn-hcc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="ChU-Bs-xTJ"/>
+                            <constraint firstItem="Lg9-mn-hcc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="184" id="Yp5-gK-pXm"/>
+                            <constraint firstItem="Ao9-71-Lv6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hd8-68-Jph"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RtY-T3-F5n" secondAttribute="trailing" constant="20" id="ltW-Hf-LTr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ao9-71-Lv6" secondAttribute="trailing" constant="20" id="uEm-a1-h6z"/>
+                            <constraint firstItem="Ao9-71-Lv6" firstAttribute="top" secondItem="RtY-T3-F5n" secondAttribute="bottom" constant="131" id="uZM-B3-Hep"/>
+                            <constraint firstItem="RtY-T3-F5n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xIu-Gu-upu"/>
+                            <constraint firstItem="RtY-T3-F5n" firstAttribute="top" secondItem="Lg9-mn-hcc" secondAttribute="bottom" constant="86" id="yVx-LK-NFL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Label_1" destination="Ao9-71-Lv6" id="o9m-YS-UB6"/>
+                        <outlet property="slide_control" destination="RtY-T3-F5n" id="zAa-gN-ejk"/>
+                        <outlet property="switch_control" destination="Lg9-mn-hcc" id="yjJ-Ks-9wn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+</document>
