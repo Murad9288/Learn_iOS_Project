@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Data View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddDataViewController" id="Y6W-OH-hqX" customClass="AddDataViewController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="DTF-er-gwz">
+                                <rect key="frame" x="87" y="325.5" width="240" height="245"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add data" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tLp-Ol-mKR">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="36.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36.5" id="fCZ-Y5-6fu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PuU-aJ-S3P">
+                                        <rect key="frame" x="0.0" y="44.5" width="240" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125.5" id="Y8b-hm-hoB"/>
+                                            <constraint firstAttribute="width" constant="240" id="dI4-xk-RzI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g0-J6-XOe">
+                                        <rect key="frame" x="59" y="176" width="122.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="selected image"/>
+                                        <connections>
+                                            <action selector="selectImageButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="P6b-IZ-oUd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pY-Yt-kws">
+                                        <rect key="frame" x="92.5" y="214" width="55.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                        <connections>
+                                            <action selector="saveButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S3D-zo-MSH"/>
+                                            <action selector="selectImageButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6wY-2e-ewY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PuU-aJ-S3P" firstAttribute="top" secondItem="tLp-Ol-mKR" secondAttribute="bottom" constant="8" id="Pio-qb-hiz"/>
+                                    <constraint firstAttribute="trailing" secondItem="tLp-Ol-mKR" secondAttribute="trailing" id="Rbh-NR-VCi"/>
+                                    <constraint firstItem="PuU-aJ-S3P" firstAttribute="leading" secondItem="DTF-er-gwz" secondAttribute="leading" id="T3u-xX-BCb"/>
+                                    <constraint firstAttribute="trailing" secondItem="tLp-Ol-mKR" secondAttribute="trailing" id="hwL-3W-sNR"/>
+                                    <constraint firstItem="tLp-Ol-mKR" firstAttribute="leading" secondItem="DTF-er-gwz" secondAttribute="leading" id="krE-b5-qs8"/>
+                                    <constraint firstAttribute="trailing" secondItem="PuU-aJ-S3P" secondAttribute="trailing" id="rpa-4x-ntj"/>
+                                    <constraint firstItem="tLp-Ol-mKR" firstAttribute="leading" secondItem="DTF-er-gwz" secondAttribute="leading" id="swd-jY-Ooy"/>
+                                    <constraint firstItem="tLp-Ol-mKR" firstAttribute="top" secondItem="DTF-er-gwz" secondAttribute="top" id="zzm-p1-Nfa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DTF-er-gwz" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Fb5-gZ-XnF"/>
+                            <constraint firstItem="DTF-er-gwz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="t36-5r-QeX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="PuU-aJ-S3P" id="DNX-DE-OPV"/>
+                        <outlet property="textField" destination="tLp-Ol-mKR" id="0aa-sd-z0f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="48.883928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
