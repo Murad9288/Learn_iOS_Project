@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewController" id="Y6W-OH-hqX" customClass="ImageViewController" customModule="My_Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="ajA-n1-tgf">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5bf-7q-plk">
+                                        <rect key="frame" x="0.0" y="14.666666666666686" width="393" height="579"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5bf-7q-plk" firstAttribute="top" secondItem="oQm-17-wYq" secondAttribute="top" constant="12.999999999999964" id="6gX-us-bYQ"/>
+                                    <constraint firstItem="5bf-7q-plk" firstAttribute="bottom" secondItem="oQm-17-wYq" secondAttribute="bottom" multiplier="1:1" constant="-256.33333333333337" id="Erw-qS-Jd5"/>
+                                    <constraint firstItem="5bf-7q-plk" firstAttribute="trailing" secondItem="oQm-17-wYq" secondAttribute="trailing" id="Rid-Al-B1W"/>
+                                    <constraint firstItem="5bf-7q-plk" firstAttribute="height" secondItem="Lb5-yP-pkd" secondAttribute="height" constant="-270" id="WNk-L2-Hzw"/>
+                                    <constraint firstItem="5bf-7q-plk" firstAttribute="width" secondItem="Lb5-yP-pkd" secondAttribute="width" id="mh5-8y-NW9"/>
+                                    <constraint firstItem="5bf-7q-plk" firstAttribute="leading" secondItem="oQm-17-wYq" secondAttribute="leading" id="tXC-l6-H0b"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="oQm-17-wYq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Lb5-yP-pkd"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Kud-eK-dLR"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ajA-n1-tgf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="2Dj-fZ-8BD"/>
+                            <constraint firstItem="ajA-n1-tgf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GY7-lc-jW6"/>
+                            <constraint firstItem="ajA-n1-tgf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="koZ-hw-76n"/>
+                            <constraint firstAttribute="bottom" secondItem="ajA-n1-tgf" secondAttribute="bottom" id="w7B-rQ-cX5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="ajA-n1-tgf" id="CZF-IU-fac"/>
+                        <outlet property="selectedImageView" destination="5bf-7q-plk" id="ytt-Xm-wdq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

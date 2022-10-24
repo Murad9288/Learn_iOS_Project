@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Gallery_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="154" height="121"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="154" height="121"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DcT-eA-aNh">
+                        <rect key="frame" x="3" y="6" width="148" height="109"/>
+                        <imageReference key="image" image="photo.artframe" catalog="system" symbolScale="small"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J2-aH-rC5">
+                        <rect key="frame" x="107" y="3" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="89h-Gw-wce"/>
+                            <constraint firstAttribute="height" constant="44" id="MAF-dP-ls2"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="trash" catalog="system"/>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="8J2-aH-rC5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="5Vj-o9-lNa"/>
+                <constraint firstAttribute="trailing" secondItem="DcT-eA-aNh" secondAttribute="trailing" constant="3" id="M9J-OA-jU8"/>
+                <constraint firstAttribute="bottom" secondItem="DcT-eA-aNh" secondAttribute="bottom" constant="3" id="XQi-Dg-MvJ"/>
+                <constraint firstItem="DcT-eA-aNh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="cqY-3v-8bl"/>
+                <constraint firstAttribute="trailing" secondItem="8J2-aH-rC5" secondAttribute="trailing" constant="3" id="tlR-Gc-nOl"/>
+                <constraint firstItem="DcT-eA-aNh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="y18-gE-IK5"/>
+            </constraints>
+            <size key="customSize" width="154" height="121"/>
+            <connections>
+                <outlet property="deleteButtuon" destination="8J2-aH-rC5" id="7Um-rs-FPi"/>
+                <outlet property="imageView" destination="DcT-eA-aNh" id="Ws1-Ve-gIU"/>
+            </connections>
+            <point key="canvasLocation" x="52.307692307692307" y="45.85308056872038"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
