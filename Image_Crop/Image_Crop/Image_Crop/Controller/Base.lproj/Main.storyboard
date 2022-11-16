@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Image_Crop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RXJ-zo-q8X">
+                                <rect key="frame" x="27.666666666666657" y="250.66666666666663" width="338" height="351"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DT2-TE-BfS">
+                                        <rect key="frame" x="0.0" y="1.6666666666666572" width="338" height="348"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="338" id="6zH-eq-oEg"/>
+                                    <constraint firstAttribute="height" constant="351" id="G1X-q1-6zT"/>
+                                    <constraint firstAttribute="bottom" secondItem="DT2-TE-BfS" secondAttribute="bottom" id="IVC-bd-6xS"/>
+                                    <constraint firstItem="DT2-TE-BfS" firstAttribute="top" secondItem="RXJ-zo-q8X" secondAttribute="top" id="fdB-G7-3h0"/>
+                                    <constraint firstAttribute="trailing" secondItem="DT2-TE-BfS" secondAttribute="trailing" id="k99-p8-KLD"/>
+                                    <constraint firstItem="DT2-TE-BfS" firstAttribute="leading" secondItem="RXJ-zo-q8X" secondAttribute="leading" id="lPc-LO-Nrj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84p-TE-4o8">
+                                <rect key="frame" x="16" y="660.66666666666663" width="361" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="HhV-hc-nLU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Pick Image">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t1g-dB-mAf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RXJ-zo-q8X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7YD-Ed-KT9"/>
+                            <constraint firstItem="84p-TE-4o8" firstAttribute="top" secondItem="RXJ-zo-q8X" secondAttribute="bottom" constant="59" id="CO4-Xx-BdG"/>
+                            <constraint firstItem="RXJ-zo-q8X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PXU-sN-ixt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="84p-TE-4o8" secondAttribute="trailing" constant="16" id="dmo-Bt-yCB"/>
+                            <constraint firstItem="84p-TE-4o8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rVG-ON-oED"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageContainer" destination="RXJ-zo-q8X" id="02z-wl-VYr"/>
+                        <outlet property="imageView" destination="DT2-TE-BfS" id="DwV-Hh-4z3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
