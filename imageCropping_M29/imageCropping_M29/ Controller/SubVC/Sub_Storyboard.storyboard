@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sub View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SubViewController" id="Y6W-OH-hqX" customClass="SubViewController" customModule="imageCropping_M29" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Czu-15-jHU">
+                                <rect key="frame" x="16" y="273" width="361" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="kvH-5o-hgr"/>
+                                    <constraint firstAttribute="width" constant="361" id="tgE-Yr-fWg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWZ-jo-UtP">
+                                <rect key="frame" x="143" y="582" width="113" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Home" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="homeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8Lj-C6-Gg2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Czu-15-jHU" secondAttribute="trailing" constant="16" id="Tzz-Be-dtw"/>
+                            <constraint firstItem="Czu-15-jHU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="214" id="dDm-ng-WdK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SWZ-jo-UtP" secondAttribute="trailing" constant="137" id="mwu-6O-qzY"/>
+                            <constraint firstItem="SWZ-jo-UtP" firstAttribute="top" secondItem="Czu-15-jHU" secondAttribute="bottom" constant="96" id="nmh-uW-u38"/>
+                            <constraint firstItem="SWZ-jo-UtP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="143" id="rZZ-QO-xhg"/>
+                            <constraint firstItem="Czu-15-jHU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="sck-fU-j4H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Czu-15-jHU" id="5e2-qW-ca2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+</document>

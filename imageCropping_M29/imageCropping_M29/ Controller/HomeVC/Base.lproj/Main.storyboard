@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imageCropping_M29" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1C-IJ-dCv">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="28" translatesAutoresizingMaskIntoConstraints="NO" id="99x-4i-uVd">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iu2-zR-jsD">
+                                        <rect key="frame" x="61" y="352" width="271" height="149"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="149" id="d2l-yQ-8Tb"/>
+                                            <constraint firstAttribute="width" constant="271" id="j2K-xT-5mr"/>
+                                        </constraints>
+                                    </view>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAU-HR-Jde">
+                                        <rect key="frame" x="0.0" y="766" width="393" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Gallery" id="Akh-bS-RoT">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="album:" destination="BYZ-38-t0r" id="rDr-lZ-9Nm"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="VyJ-vc-7L8"/>
+                                            <barButtonItem title="Crop" width="312.33333333333337" id="cb8-hB-Vag">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="cropping:" destination="BYZ-38-t0r" id="sLP-VN-XhU"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="4gW-eX-8Kf"/>
+                                            <barButtonItem title="Shoot" width="675.33333333333337" style="done" id="Q1B-SF-kjr">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="shoot:" destination="BYZ-38-t0r" id="322-Pi-D9z"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Iu2-zR-jsD" firstAttribute="leading" secondItem="BJK-Pv-161" secondAttribute="leading" constant="61" id="3Jo-Ye-Asx"/>
+                                    <constraint firstItem="BJK-Pv-161" firstAttribute="bottom" secondItem="Iu2-zR-jsD" secondAttribute="bottom" constant="351" id="9pX-0J-QWE"/>
+                                    <constraint firstItem="Iu2-zR-jsD" firstAttribute="centerY" secondItem="W1C-IJ-dCv" secondAttribute="centerY" id="HNI-Ln-9MF"/>
+                                    <constraint firstItem="JAU-HR-Jde" firstAttribute="leading" secondItem="BJK-Pv-161" secondAttribute="leading" id="MGn-gP-a7L"/>
+                                    <constraint firstItem="JAU-HR-Jde" firstAttribute="trailing" secondItem="BJK-Pv-161" secondAttribute="trailing" id="PQc-7E-xkF"/>
+                                    <constraint firstItem="Iu2-zR-jsD" firstAttribute="top" secondItem="BJK-Pv-161" secondAttribute="top" constant="352" id="Pfc-km-1qm"/>
+                                    <constraint firstItem="Iu2-zR-jsD" firstAttribute="centerX" secondItem="W1C-IJ-dCv" secondAttribute="centerX" id="Qjj-T7-Ogr"/>
+                                    <constraint firstItem="99x-4i-uVd" firstAttribute="leading" secondItem="gqF-gD-YCc" secondAttribute="leading" id="Ujo-A4-h6Z"/>
+                                    <constraint firstItem="99x-4i-uVd" firstAttribute="bottom" secondItem="gqF-gD-YCc" secondAttribute="bottom" constant="852" id="Za7-SZ-b1t"/>
+                                    <constraint firstItem="99x-4i-uVd" firstAttribute="trailing" secondItem="gqF-gD-YCc" secondAttribute="trailing" constant="393" id="dC9-6S-pZ2"/>
+                                    <constraint firstItem="BJK-Pv-161" firstAttribute="bottom" secondItem="JAU-HR-Jde" secondAttribute="bottom" constant="42" id="kgu-YG-BX9"/>
+                                    <constraint firstItem="99x-4i-uVd" firstAttribute="top" secondItem="gqF-gD-YCc" secondAttribute="top" id="nDD-kZ-q9l"/>
+                                    <constraint firstItem="BJK-Pv-161" firstAttribute="trailing" secondItem="Iu2-zR-jsD" secondAttribute="trailing" constant="61" id="ofl-Pt-i5t"/>
+                                    <constraint firstItem="99x-4i-uVd" firstAttribute="width" secondItem="BJK-Pv-161" secondAttribute="width" multiplier="0.610687" constant="153" id="rzH-wJ-Fkd"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="gqF-gD-YCc"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="BJK-Pv-161"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lAw-SL-MJJ"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W1C-IJ-dCv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2qs-fP-ZZK"/>
+                            <constraint firstItem="W1C-IJ-dCv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NNv-Ij-DDf"/>
+                            <constraint firstItem="W1C-IJ-dCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XNf-4C-h5V"/>
+                            <constraint firstAttribute="bottom" secondItem="W1C-IJ-dCv" secondAttribute="bottom" id="v3i-Ff-098"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ManiImageView" destination="99x-4i-uVd" id="TLG-l7-IWW"/>
+                        <outlet property="crop" destination="Iu2-zR-jsD" id="ZZG-Ct-fOz"/>
+                        <outlet property="scroll" destination="W1C-IJ-dCv" id="vnP-l0-rdX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="28" width="1658" height="851"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
